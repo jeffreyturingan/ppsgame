@@ -1,0 +1,110 @@
+﻿/*-----------------------------------------------------------------------------------------------
+Project Name: | Gentlease Invite
+Description:  | Ipad App
+Company:      | autologicmedia
+Company URI   | http://autologicmedia.com
+Author:       | Jeffrey B. Turingan
+Author URI:   | http://autologicmedia.com/
+License:      | GNU General Public License v2.0
+License URI:  | http://www.gnu.org/licenses/gpl-2.0.html
+------------------------------------------------------------------------------------------------*/
+
+body { margin: 0;padding: 0; font-family: Arial, Helvetica, sans-serif;font-size: 12px; line-height: 18px; background-color:#30bae4}
+a { cursor: pointer;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a,img { border: 0;outline-width:0;}
+#wrapper { width: 768px; height:1024px; margin: 0 auto; overflow: hidden;position: relative;}
+.slide { width: 768px; height: 1024px; margin: 0 auto; overflow: hidden;position: absolute; left: 100%;top: 0; display:block;-moz-transition: 0.5s;-webkit-transition: 0.5s; transition: 0.5s}
+.slide.active { left: 0}
+.slide.done { left: -100%}
+
+.footer { width: 768px;height: 110px;position: absolute;left: 0; bottom: 0; z-index: 9001;background: url('images/footer.jpg') left top}
+
+
+#cover { background: url('images/cover.jpg') center top}
+.startBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px }
+
+
+#regpage { background: url('images/register.jpg') center top}
+#regpage input[type=text] {background: transparent;border: 0 none;border-radius: 54px;color: #0063A1;display: block;font-size: 26px;height: 52px;left: 199px;line-height: 55px;padding: 0;position: absolute;width: 467px; padding: 0 20px}
+#name { top: 355px}
+#prc { top: 454px}
+#address { top: 557px}
+.regBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px;cursor: pointer }
+
+
+#mech { background: url('images/mech.jpg') center top}
+.playBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px;cursor: pointer }
+
+
+
+.intel { background: url('images/intel.jpg') center top}
+.intel-chart { width: 440px; height: 444px;background: url('images/intel-chart.png') left  top; position: absolute;left:164px;top: 303px  }
+.intel-chart.right { background-position: left -444px}
+.intel-chart.wrong { background-position: left bottom}
+.intel-chart a { display: block;float: left;width: 220px;height:222px; }
+
+.motor { background: url('images/motor.jpg') center top}
+.motor-chart { width: 440px; height: 444px;background: url('images/motor-chart.png') left  top; position: absolute;left:164px;top: 303px  }
+.motor-chart.right { background-position: left -444px}
+.motor-chart.wrong { background-position: left bottom}
+.motor-chart a { display: block;float: left;width: 220px;height:222px; }
+
+.emo { background: url('images/emo.jpg') center top}
+.emo-chart { width: 440px; height: 444px;background: url('images/emo-chart.png') left  top; position: absolute;left:164px;top: 303px  }
+.emo-chart.right { background-position: left -444px}
+.emo-chart.wrong { background-position: left bottom}
+.emo-chart a { display: block;float: left;width: 220px;height:222px; }
+
+.comm { background: url('images/comm.jpg') center top}
+.comm-chart { width: 440px; height: 444px;background: url('images/comm-chart.png') left  top; position: absolute;left:164px;top: 303px  }
+.comm-chart.right { background-position: left -444px}
+.comm-chart.wrong { background-position: left bottom}
+.comm-chart a { display: block;float: left;width: 220px;height:222px; }
+
+.clock { background: url('images/clock.jpg') center top}
+.clock-chart { width: 440px; height: 444px;background: url('images/clock-chart.png') left  top; position: absolute;left:164px;top: 303px  }
+.clock-chart.right { background-position: left -444px}
+.clock-chart.wrong { background-position: left bottom}
+.clock-chart a { display: block;float: left;width: 220px;height:222px; }
+
+
+
+.slide img  { display: none;position: absolute}
+
+.righttxt  { left:178px; top: 808px }
+.wrongtxt  { left:243px; top: 808px }
+
+#q1.right .righttxt,
+#q2.right .righttxt,
+#q3.right .righttxt,
+#q4.right .righttxt,
+#q5.right .righttxt 
+{ display: block!important}
+
+#q1.wrong .wrongtxt,
+#q2.wrong .wrongtxt,
+#q3.wrong .wrongtxt,
+#q4.wrong .wrongtxt,
+#q5.wrong .wrongtxt 
+{ display: block!important}
+
+
+
+#gw { background: url('images/gw.jpg') center top}
+.contBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px }
+
+#fin { background: url('images/fin.jpg') center top}
+.finBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px }
+
+
+
+
+
+
+
+
+
+
+
+
+

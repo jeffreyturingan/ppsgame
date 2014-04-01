@@ -1,42 +1,107 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World!</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+<link href="css/main.css" rel="stylesheet">
+<script src="js/modernizr.custom.79639.js"></script>
+<title>Gentlease PPS</title>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="cover" class="slide active">
+			<a class="startBtn"></a>
+		</div>
+		<div id="regpage" class="slide">
+			<input type="text" id="name" required/>
+			<input type="text" id="prc" required/>
+			<input type="text" id="address" required/>
+			<input type="button" class="regBtn"/>
+		</div>
+		<div id="mech" class="slide">
+			<a class="playBtn"></a>
+		</div>
+		
+		<div id="q1" class="intel slide">
+			<div class="intel-chart">
+				<a class="i1"></a>
+				<a class="i2"></a>
+				<a class="i3"></a>
+				<a class="i4"></a>
+			</div>
+			<img src="css/images/right.png" alt="" class="righttxt"/>
+			<img src="css/images/wrong.png" alt="" class="wrongtxt"/>
+			
+			
+		</div>
+		
+		<div id="q2" class="motor slide">
+			<div class="motor-chart">
+				<a class="m1"></a>
+				<a class="m2"></a>
+				<a class="m3"></a>
+				<a class="m4"></a>
+			</div>
+			<img src="css/images/right.png" alt="" class="righttxt"/>
+			<img src="css/images/wrong.png" alt="" class="wrongtxt"/>
+			
+			
+		</div>
+		
+		<div id="q3" class="emo slide">
+			<div class="emo-chart">
+				<a class="e1"></a>
+				<a class="e2"></a>
+				<a class="e3"></a>
+				<a class="e4"></a>
+			</div>
+			<img src="css/images/right.png" alt="" class="righttxt"/>
+			<img src="css/images/wrong.png" alt="" class="wrongtxt"/>
+			
+			
+		</div>
+		
+		<div id="q4" class="comm slide">
+			<div class="comm-chart">
+				<a class="c1"></a>
+				<a class="c2"></a>
+				<a class="c3"></a>
+				<a class="c4"></a>
+			</div>
+			<img src="css/images/right.png" alt="" class="righttxt"/>
+			<img src="css/images/wrong.png" alt="" class="wrongtxt"/>
+			
+			
+		</div>
+		
+		
+		<div id="q5" class="clock slide">
+			<div class="clock-chart">
+				<a class="cl1"></a>
+				<a class="cl2"></a>
+				<a class="cl3"></a>
+				<a class="cl4"></a>
+			</div>
+			<img src="css/images/right.png" alt="" class="righttxt"/>
+			<img src="css/images/wrong.png" alt="" class="wrongtxt"/>
+			
+			
+		</div>
+		<div id="gw" class="slide">
+			<a class="contBtn"></a>
+		</div>
+		<div id="fin" class="slide">
+			<a class="finBtn"></a>
+		</div>
+		
+		
+		
+		<audio id="clocktick" src="sound/clock.mp3" loop="loop"/>
+	</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
