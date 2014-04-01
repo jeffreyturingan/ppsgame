@@ -22,6 +22,7 @@
 		document.getElementById('clocktick').play();
 	});
 	
+	
 	$('.intel-chart a').each(function() {
 		$(this).click(function() {
 			if($(this).hasClass('i1')) {
