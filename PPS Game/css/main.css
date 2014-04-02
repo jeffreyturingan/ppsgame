@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------------------------------------
+﻿/*-----------------------------------------------------------------------------------------------
 Project Name: | Gentlease Invite
 Description:  | Ipad App
 Company:      | autologicmedia
@@ -13,7 +13,7 @@ body { margin: 0;padding: 0; font-family: Arial, Helvetica, sans-serif;font-size
 a { cursor: pointer;-webkit-tap-highlight-color: rgba(0,0,0,0);}
 a,img { border: 0;outline-width:0;}
 #wrapper { width: 768px; height:1024px; margin: 0 auto; overflow: hidden;position: relative;}
-.slide { width: 768px; height: 1024px; margin: 0 auto; overflow: hidden;position: absolute; left: 100%;top: 0; display:block;-moz-transition: 0.3s;-webkit-transition: 0.3s; transition: 0.3s}
+.slide { width: 768px; height: 1024px; margin: 0 auto; overflow: hidden;position: absolute; left: 100%;top: 0; display:block;-moz-transition: 0.6s;-webkit-transition: 0.7s; transition: 0.5s}
 .slide.active { left: 0}
 .slide.done { left: -100%}
 
