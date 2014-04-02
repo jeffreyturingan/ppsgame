@@ -114,7 +114,7 @@ right: 20px;
 z-index: 9002
 }
 
-.error {box-shadow: 0 0 10px #FF0000 inset;}
+.error {-moz-box-shadow: 0 0 10px #FF0000 inset;-webkit-box-shadow: 0 0 10px #FF0000 inset;box-shadow: 0 0 10px #FF0000 inset;}
 
 #retry {background: url('images/tryagain.jpg') center top}
 .retryBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px;cursor: pointer }
