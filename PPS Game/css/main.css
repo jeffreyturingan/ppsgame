@@ -1,4 +1,4 @@
-﻿/*-----------------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------------------------
 Project Name: | Gentlease Invite
 Description:  | Ipad App
 Company:      | autologicmedia
@@ -13,7 +13,7 @@ body { margin: 0;padding: 0; font-family: Arial, Helvetica, sans-serif;font-size
 a { cursor: pointer;-webkit-tap-highlight-color: rgba(0,0,0,0);}
 a,img { border: 0;outline-width:0;}
 #wrapper { width: 768px; height:1024px; margin: 0 auto; overflow: hidden;position: relative;}
-.slide { width: 768px; height: 1024px; margin: 0 auto; overflow: hidden;position: absolute; left: 100%;top: 0; display:block;-moz-transition: 0.5s;-webkit-transition: 0.5s; transition: 0.5s}
+.slide { width: 768px; height: 1024px; margin: 0 auto; overflow: hidden;position: absolute; left: 100%;top: 0; display:block;-moz-transition: 0.3s;-webkit-transition: 0.3s; transition: 0.3s}
 .slide.active { left: 0}
 .slide.done { left: -100%}
 
@@ -25,7 +25,7 @@ a,img { border: 0;outline-width:0;}
 
 
 #regpage { background: url('images/register.jpg') center top}
-#regpage input[type=text] {background: transparent;border: 0 none;border-radius: 50px;color: #0063A1;display: block;font-size: 26px;height: 50px;left: 206px;line-height: 55px;padding: 0 20px;position: absolute;width: 449px;}
+#regpage input[type=text] {background: transparent;border:0;border-radius: 50px;color: #0063A1;display: block;font-size: 26px;height: 50px;left: 206px;line-height: 55px;padding: 0 20px;position: absolute;width: 450px;}
 #name { top: 308px}
 #prc { top: 367px}
 #address { top: 426px}
@@ -43,8 +43,8 @@ a,img { border: 0;outline-width:0;}
 
 
 .intel { background: url('images/intel.jpg') center top}
-.intel-chart { width: 440px; height: 444px;background: url('images/intel-chart.png') left  top; position: absolute;left:164px;top: 303px  }
-.intel-chart.right { background-position: left -444px}
+.intel-chart { width: 440px; height: 444px;background: url('images/intel-chart.png') left  top; position: absolute;left:164px;top: 303px; }
+.intel-chart.right { background-position: left -444px;}
 .intel-chart.wrong { background-position: left bottom}
 .intel-chart a { display: block;float: left;width: 220px;height:222px; }
 
@@ -108,16 +108,18 @@ margin: 24px 0;
 }
 
 #counter{
-bottom: 20px;
+top: 220px;
 position: absolute;
 right: 20px;
 z-index: 9002
 }
 
+.error {box-shadow: 0 0 10px #FF0000 inset;}
 
+#retry {background: url('images/tryagain.jpg') center top}
+.retryBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px;cursor: pointer }
 
-
-
+.zoom { transform: scale(1.3)}
 
 
 

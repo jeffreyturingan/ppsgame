@@ -12,6 +12,17 @@
 	$('.regBtn').css({opacity: '0'});
 	
 	$('.regBtn').click(function() {
+		var errorcount = 0;
+		$('#regpage > input[required="required"]').each(function(){
+			if($.trim($(this).val()) == ""){
+				$(this).addClass('error');
+				errorcount += 1;
+			}else{
+				$(this).removeClass('error');
+			}
+		});
+		if(errorcount > 0){return;}
+		
 		$('#regpage').removeClass('active').addClass('done');
 		$('#mech').addClass('active');
 		
@@ -20,7 +31,7 @@
 		crossDomain: true,
 		dataType : 'jsonp', 
 		data: {name: $('#name').val(),prc:$('#prc').val(),address:$('#address').val(),nameb:$('#name2').val() ,prcb:$('#prc2').val() ,addressb:$('#address2').val()},
-		url: "https://detbucket.com/index.php/powerupservice/register" }).done();		
+		url: "https://detbucket.com/index.php/powerupservice/register" }).done();	
 		
 	});
 	
@@ -30,7 +41,7 @@
 		document.getElementById('clocktick').play();
 		$('#counter').countdown({
           image: 'css/images/digits.png',
-          startTime: '00:10',
+          startTime: '03:00',
           timerEnd: function(){ endtime(); },
           format: 'mm:ss'
         });
@@ -40,7 +51,8 @@
 	$('.intel-chart a').each(function() {
 		$(this).click(function() {
 			if($(this).hasClass('i1')) {
-				document.getElementById('clocktick').pause();
+				
+				/*document.getElementById('clocktick').pause();*/
 				$('#q1,.intel-chart').addClass('right').removeClass('wrong');
 				$('.intel-chart').children().remove('a').delay(800).queue(function() {
 					document.getElementById('clocktick').play();
@@ -55,7 +67,7 @@
 	$('.motor-chart a').each(function() {
 		$(this).click(function() {
 			if($(this).hasClass('m2')) {
-				document.getElementById('clocktick').pause();
+				/*document.getElementById('clocktick').pause();*/
 				$('#q2').addClass('right').removeClass('wrong');
 				$('.motor-chart').addClass('right').removeClass('wrong');
 				$('.motor-chart').children().remove('a').delay(800).queue(function() {
@@ -71,7 +83,7 @@
 	$('.emo-chart a').each(function() {
 		$(this).click(function() {
 			if($(this).hasClass('e4')) {
-				document.getElementById('clocktick').pause();
+				/*document.getElementById('clocktick').pause();*/
 				$('#q3').addClass('right').removeClass('wrong');
 				$('.emo-chart').addClass('right').removeClass('wrong');
 				$('.emo-chart').children().remove('a').delay(800).queue(function() {
@@ -87,7 +99,7 @@
 	$('.comm-chart a').each(function() {
 		$(this).click(function() {
 			if($(this).hasClass('c3')) {
-				document.getElementById('clocktick').pause();
+				/*document.getElementById('clocktick').pause();*/
 				$('#q4').addClass('right').removeClass('wrong');
 				$('.comm-chart').addClass('right').removeClass('wrong');
 				$('.comm-chart').children().remove('a').delay(800).queue(function() {
@@ -103,7 +115,7 @@
 	$('.clock-chart a').each(function() {
 		$(this).click(function() {
 			if($(this).hasClass('cl2')) {
-				document.getElementById('clocktick').pause();
+				/*document.getElementById('clocktick').pause();*/
 				$('#q5').addClass('right').removeClass('wrong');
 				$('.clock-chart').addClass('right').removeClass('wrong');
 				$('.clock-chart').children().remove('a').delay(800).queue(function() {
@@ -121,7 +133,7 @@
 		$(this).parent('#gw').siblings('#fin').addClass('active');
 	});
 	
-	$('.finBtn').click(function() {
+	$('.finBtn,.retryBtn').click(function() {
 		location.reload();
 	});
 	
@@ -161,6 +173,7 @@
 			$('#q5').delay(5000).removeClass('active').addClass('done');
 			$('#gw').delay(5000).addClass('active');
 			$('#counter').remove();
+			document.getElementById('clocktick').pause();
 		}
 		
 	}
@@ -169,8 +182,9 @@
 	function endtime() {
 		var active = $('div.active').attr('id');
 		$('#' + active).delay(5000).removeClass('active').addClass('done');
-		$('#gw').delay(5000).addClass('active');
+		$('#retry').delay(5000).addClass('active');
 		$('#counter').remove();
+		document.getElementById('clocktick').pause();
 
 	}
 	
