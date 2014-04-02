@@ -7,18 +7,24 @@
 
 <link href="css/main.css" rel="stylesheet">
 <script src="js/modernizr.custom.79639.js"></script>
-<title>Enfa PPS</title>
+<title>Gentlease PPS</title>
 </head>
 <body>
 	<div id="wrapper">
+		<div id="counter"></div>
+
 		<div id="cover" class="slide active">
 			<a class="startBtn"></a>
 		</div>
 		<div id="regpage" class="slide">
-			<input type="text" id="name" required/>
-			<input type="text" id="prc" required/>
-			<input type="text" id="address" required/>
-			<input type="button" class="regBtn"/>
+				<input type="text" id="name" required/>
+				<input type="text" id="prc" required/>
+				<input type="text" id="address" required/>
+				
+				<input type="text" id="name2" />
+				<input type="text" id="prc2" />
+				<input type="text" id="address2" />
+				<input type="button" class="regBtn"/>
 		</div>
 		<div id="mech" class="slide">
 			<a class="playBtn"></a>
@@ -34,7 +40,6 @@
 			<img src="css/images/right.png" alt="" class="righttxt"/>
 			<img src="css/images/wrong.png" alt="" class="wrongtxt"/>
 			
-			
 		</div>
 		
 		<div id="q2" class="motor slide">
@@ -46,7 +51,6 @@
 			</div>
 			<img src="css/images/right.png" alt="" class="righttxt"/>
 			<img src="css/images/wrong.png" alt="" class="wrongtxt"/>
-			
 			
 		</div>
 		
@@ -96,12 +100,17 @@
 			<a class="finBtn"></a>
 		</div>
 		
+		<div id="retry" class="slide">
+			<a class="retryBtn"></a>
+		</div>
+		
 		
 		
 		<audio id="clocktick" src="sound/clock.mp3" loop="loop"/>
 	</div>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

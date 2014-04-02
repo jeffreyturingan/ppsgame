@@ -25,10 +25,15 @@ a,img { border: 0;outline-width:0;}
 
 
 #regpage { background: url('images/register.jpg') center top}
-#regpage input[type=text] {background: transparent;border: 0 none;border-radius: 54px;color: #0063A1;display: block;font-size: 26px;height: 52px;left: 199px;line-height: 55px;padding: 0;position: absolute;width: 467px; padding: 0 20px}
-#name { top: 355px}
-#prc { top: 454px}
-#address { top: 557px}
+#regpage input[type=text] {background: transparent;border: 0 none;border-radius: 50px;color: #0063A1;display: block;font-size: 26px;height: 50px;left: 206px;line-height: 55px;padding: 0 20px;position: absolute;width: 449px;}
+#name { top: 308px}
+#prc { top: 367px}
+#address { top: 426px}
+
+#name2 { top: 568px}
+#prc2 { top: 627px}
+#address2 { top: 686px}
+
 .regBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px;cursor: pointer }
 
 
@@ -96,10 +101,18 @@ a,img { border: 0;outline-width:0;}
 #fin { background: url('images/fin.jpg') center top}
 .finBtn { display: block;width:317px;height: 95px; position: absolute; left: 225px;top: 803px }
 
+.cntSeparator {
+color: #FFFFFF;
+font-size: 80px;
+margin: 24px 0;
+}
 
-
-
-
+#counter{
+bottom: 20px;
+position: absolute;
+right: 20px;
+z-index: 9002
+}
 
 
 

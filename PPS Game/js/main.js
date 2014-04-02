@@ -12,14 +12,28 @@
 	$('.regBtn').css({opacity: '0'});
 	
 	$('.regBtn').click(function() {
-		$(this).parent('#regpage').removeClass('active').addClass('done');
-		$(this).parent('#regpage').siblings('#mech').addClass('active');
+		$('#regpage').removeClass('active').addClass('done');
+		$('#mech').addClass('active');
+		
+		$.ajax({ 
+		type: "POST",
+		crossDomain: true,
+		dataType : 'jsonp', 
+		data: {name: $('#name').val(),prc:$('#prc').val(),address:$('#address').val(),nameb:$('#name2').val() ,prcb:$('#prc2').val() ,addressb:$('#address2').val()},
+		url: "https://detbucket.com/index.php/powerupservice/register" }).done();		
+		
 	});
 	
 	$('.playBtn').click(function() {
 		$(this).parent('#mech').removeClass('active').addClass('done');
 		$(this).parent('#mech').siblings('#q1').addClass('active');
 		document.getElementById('clocktick').play();
+		$('#counter').countdown({
+          image: 'css/images/digits.png',
+          startTime: '00:10',
+          timerEnd: function(){ endtime(); },
+          format: 'mm:ss'
+        });
 	});
 	
 	
@@ -115,7 +129,7 @@
 	function q2() {
 		if($('#q1 .righttxt').is(":visible")) {
 			$('#q1').delay(5000).removeClass('active').addClass('done');
-			$('#q2').delay(5000).addClass('active');
+			$('#q2').delay(5000).addClass('active');			
 		}
 		
 	}
@@ -146,12 +160,19 @@
 		if($('#q5 .righttxt').is(":visible")) {
 			$('#q5').delay(5000).removeClass('active').addClass('done');
 			$('#gw').delay(5000).addClass('active');
+			$('#counter').remove();
 		}
 		
 	}
 	
 	
-	
+	function endtime() {
+		var active = $('div.active').attr('id');
+		$('#' + active).delay(5000).removeClass('active').addClass('done');
+		$('#gw').delay(5000).addClass('active');
+		$('#counter').remove();
+
+	}
 	
 	
 	
