@@ -4,14 +4,14 @@
 	  e.preventDefault();
 	}, false);
 	
-	$('.startBtn').click(function() {
+	$('.startBtn').live('click',function() {
 		$(this).parent('#cover').removeClass('active').addClass('done');
 		$(this).parent('#cover').siblings('#regpage').addClass('active');
 	});
 	
 	$('.regBtn').css({opacity: '0'});
 	
-	$('.regBtn').click(function() {
+	$('.regBtn').live('click',function() {
 		var errorcount = 0;
 		$('#regpage > input[required="required"]').each(function(){
 			if($.trim($(this).val()) == ""){
@@ -35,13 +35,13 @@
 		
 	});
 	
-	$('.playBtn').click(function() {
+	$('.playBtn').live('click',function() {
 		$(this).parent('#mech').removeClass('active').addClass('done');
 		$(this).parent('#mech').siblings('#q1').addClass('active');
 		document.getElementById('clocktick').play();
 		$('#counter').countdown({
           image: 'css/images/digits.png',
-          startTime: '03:00',
+          startTime: '01:00',
           timerEnd: function(){ endtime(); },
           format: 'mm:ss'
         });
@@ -49,7 +49,7 @@
 	
 	
 	$('.intel-chart a').each(function() {
-		$(this).click(function() {
+		$(this).live('click',function() {
 			if($(this).hasClass('i1')) {
 				
 				/*document.getElementById('clocktick').pause();*/
@@ -65,7 +65,7 @@
 		});
 	});
 	$('.motor-chart a').each(function() {
-		$(this).click(function() {
+		$(this).live('click',function() {
 			if($(this).hasClass('m2')) {
 				/*document.getElementById('clocktick').pause();*/
 				$('#q2').addClass('right').removeClass('wrong');
@@ -81,7 +81,7 @@
 		});
 	});
 	$('.emo-chart a').each(function() {
-		$(this).click(function() {
+		$(this).live('click', function() {
 			if($(this).hasClass('e4')) {
 				/*document.getElementById('clocktick').pause();*/
 				$('#q3').addClass('right').removeClass('wrong');
@@ -97,7 +97,7 @@
 		});
 	});
 	$('.comm-chart a').each(function() {
-		$(this).click(function() {
+		$(this).live('click',function() {
 			if($(this).hasClass('c3')) {
 				/*document.getElementById('clocktick').pause();*/
 				$('#q4').addClass('right').removeClass('wrong');
@@ -113,7 +113,7 @@
 		});
 	});
 	$('.clock-chart a').each(function() {
-		$(this).click(function() {
+		$(this).live('click',function() {
 			if($(this).hasClass('cl2')) {
 				/*document.getElementById('clocktick').pause();*/
 				$('#q5').addClass('right').removeClass('wrong');
@@ -128,12 +128,13 @@
 		});
 	});
 	
-	$('.contBtn').click(function() {
-		$(this).parent('#gw').removeClass('active').addClass('done');
-		$(this).parent('#gw').siblings('#fin').addClass('active');
+	$('.contBtn').live('click',function() {
+		$('#gw').removeClass('active').addClass('done');
+		$('#fin').addClass('active');
+		$('#retry').remove();
 	});
 	
-	$('.finBtn,.retryBtn').click(function() {
+	$('.finBtn,.retryBtn').live('click',function() {
 		location.reload();
 	});
 	
@@ -170,17 +171,30 @@
 	
 	function qw() {
 		if($('#q5 .righttxt').is(":visible")) {
-			$('#q5').delay(5000).removeClass('active').addClass('done');
-			$('#gw').delay(5000).addClass('active');
+			$('#q5').removeClass('active').addClass('done');
+			$('#gw').addClass('active').delay(2000).queue(function() {
+				$('.contBtn').click();
+			});
 			$('#counter').remove();
+			
 			document.getElementById('clocktick').pause();
+			
 		}
 		
 	}
 	
 	
+	/*function fin() {
+		$('#gw').delay(10000).removeClass('active').addClass('done');
+		$('#fin').delay(10000).addClass('active');
+
+	}*/
+	
 	function endtime() {
 		var active = $('div.active').attr('id');
+		if(active == 'fin') {
+			return false;
+		}
 		$('#' + active).delay(5000).removeClass('active').addClass('done');
 		$('#retry').delay(5000).addClass('active');
 		$('#counter').remove();
