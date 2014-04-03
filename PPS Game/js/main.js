@@ -1,4 +1,4 @@
-﻿$(document).ready(function() {
+$(document).ready(function() {
 	document.body.addEventListener('touchmove', function(e) {
 	  // This prevents native scrolling from happening.
 	  e.preventDefault();
@@ -172,7 +172,7 @@
 	function qw() {
 		if($('#q5 .righttxt').is(":visible")) {
 			$('#q5').removeClass('active').addClass('done');
-			$('#gw').addClass('active').delay(2000).queue(function() {
+			$('#gw').addClass('active').delay(1000).queue(function() {
 				$('.contBtn').click();
 			});
 			$('#counter').remove();
