@@ -13,7 +13,7 @@
     <iOSStatusBarStyle>BlackTranslucent</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
     <WP8SupportedResolutions>ID_RESOLUTION_WVGA;ID_RESOLUTION_WXGA;ID_RESOLUTION_HD720P</WP8SupportedResolutions>
-    <BundleVersion>1.0</BundleVersion>
+    <BundleVersion>1.2</BundleVersion>
     <DisplayName>Enfa PPS Game</DisplayName>
     <Author>jeffrey turingan</Author>
     <Description>PPS Game</Description>
